@@ -8,10 +8,13 @@ alias ga='git add .'
 # git
 #source ~/.bash/git-completion.bash
 
+# vim8
+export PATH=$PATH:/usr/local/bin
+
 # javascript
-export PATH=$PATH:$HOME/.ndenv/versions/v6.7.0/bin/gulp
-export PATH=$PATH:$HOME/.ndenv/bin
-eval "$(ndenv init -)"
+#export PATH=$PATH:$HOME/.ndenv/versions/v6.7.0/bin/gulp
+#export PATH=$PATH:$HOME/.ndenv/bin
+#eval "$(ndenv init -)"
 
 # php
 export PATH="$PATH:$HOME/.composer/vendor/bin"
