@@ -16,6 +16,7 @@ if dein#load_state('~/.cache/dein/')
   " Add or remove your plugins here:
   call dein#add('Shougo/neosnippet.vim')
   call dein#add('Shougo/neosnippet-snippets')
+  call dein#add('chriskempson/vim-tomorrow-theme')
 
   " You can specify revision/branch/tag.
   "call dein#add('Shougo/deol.nvim', { 'rev': 'a1b5108fd' })
