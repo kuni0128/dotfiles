@@ -14,6 +14,7 @@ if dein#load_state('~/.cache/dein/')
   call dein#add('~/.cache/dein//repos/github.com/Shougo/dein.vim')
 
   " Add or remove your plugins here:
+  call dein#add('scrooloose/nerdtree')                "ツリー表示
   call dein#add('Shougo/neocomplete.vim')             "コードの自動補完
   call dein#add('Shougo/neosnippet.vim')              "スニペットの補完機能
   call dein#add('Shougo/neosnippet-snippets')         "スニペット集
