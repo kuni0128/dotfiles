@@ -14,9 +14,10 @@ if dein#load_state('~/.cache/dein/')
   call dein#add('~/.cache/dein//repos/github.com/Shougo/dein.vim')
 
   " Add or remove your plugins here:
-  call dein#add('Shougo/neosnippet.vim')
-  call dein#add('Shougo/neosnippet-snippets')
-  call dein#add('chriskempson/vim-tomorrow-theme')
+  call dein#add('Shougo/neocomplete.vim')             "コードの自動補完
+  call dein#add('Shougo/neosnippet.vim')              "スニペットの補完機能
+  call dein#add('Shougo/neosnippet-snippets')         "スニペット集
+  call dein#add('chriskempson/vim-tomorrow-theme')    "カラースキーマ
 
   " You can specify revision/branch/tag.
   "call dein#add('Shougo/deol.nvim', { 'rev': 'a1b5108fd' })
