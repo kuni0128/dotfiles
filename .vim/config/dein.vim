@@ -11,7 +11,7 @@ if dein#load_state('~/.cache/dein/')
 
   " Let dein manage dein
   " Required:
-  call dein#add('~/.cache/dein//repos/github.com/Shougo/dein.vim')
+  call dein#add('~/.cache/dein/repos/github.com/Shougo/dein.vim')
 
   " Add or remove your plugins here:
   call dein#add('scrooloose/nerdtree')                "ツリー表示
