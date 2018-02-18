@@ -17,6 +17,7 @@ if dein#load_state(s:dein_dir)
   call dein#add('Shougo/neosnippet.vim')              "スニペットの補完機能
   call dein#add('Shougo/neosnippet-snippets')         "スニペット集
   call dein#add('chriskempson/vim-tomorrow-theme')    "カラースキーマ
+  call dein#add('ctrlpvim/ctrlp.vim')                 "ファイル操作
 
   call dein#end()
   call dein#save_state()
