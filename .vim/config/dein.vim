@@ -4,10 +4,13 @@ endif
 
 set runtimepath+=~/.cache/dein/repos/github.com/Shougo/dein.vim
 
-if dein#load_state('~/.cache/dein/')
-  call dein#begin('~/.cache/dein/')
+let s:dein_dir = expand('~/.cache/dein')
+let s:dein_repo_dir = s:dein_dir . '/repos/github.com/Shougo/dein.vim'
 
-  call dein#add('~/.cache/dein/repos/github.com/Shougo/dein.vim')
+if dein#load_state(s:dein_dir)
+  call dein#begin(s:dein_dir)
+
+  call dein#add(s:dein_repo_dir)
 
   call dein#add('scrooloose/nerdtree')                "ツリー表示
   call dein#add('Shougo/neocomplete.vim')             "コードの自動補完
