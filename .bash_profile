@@ -4,6 +4,7 @@ alias gc='git checkout'
 alias gb='git branch'
 alias gs='git status'
 alias ga='git add .'
+alias gd='git diff'
 
 # git
 #source ~/.bash/git-completion.bash
