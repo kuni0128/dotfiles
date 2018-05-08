@@ -6,5 +6,5 @@ set laststatus=2                     "ステータス行を常に表示
 set showcmd                          "実行前入力コマンドを右下に表示
 
 syntax on                            "シンタックスハイライトを有効
-colorscheme Tomorrow-Night-Bright    "カラースキーマを指定
+"colorscheme Tomorrow-Night-Bright    "カラースキーマを指定
 highlight LineNr ctermfg=228         "行番号の色
