@@ -17,9 +17,9 @@ export PATH=$PATH:$HOME/.ndenv/bin
 eval "$(ndenv init -)"
 
 # php
-export PATH="$PATH:$HOME/.composer/vendor/bin"
+export PATH="$PATH:$HOME/.composer/vendor/bin:$HOME/.phpenv/bin"
+eval "$(phpenv init -)"
 
 # ruby
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
-
