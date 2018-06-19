@@ -7,6 +7,7 @@ alias ga='git add .'
 
 # git
 #source ~/.bash/git-completion.bash
+export PATH=$PATH:/usr/local/share/git-core/contrib/diff-highlight
 
 # vim8
 export PATH=$PATH:/usr/local/bin
