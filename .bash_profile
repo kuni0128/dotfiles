@@ -5,6 +5,7 @@ alias gb='git branch'
 alias gs='git status'
 alias ga='git add .'
 alias gd='git diff'
+alias p='peco'
 
 # git
 #source ~/.bash/git-completion.bash
@@ -25,3 +26,6 @@ eval "$(phpenv init -)"
 # ruby
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
+
+# peco
+source ~/dotfiles/.bash/peco_history.sh
