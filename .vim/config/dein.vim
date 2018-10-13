@@ -20,6 +20,7 @@ if dein#load_state(s:dein_dir)
   call dein#add('ctrlpvim/ctrlp.vim')                 "ファイル操作
   call dein#add('slim-template/vim-slim')             "slim用シンタックスハイライト
   call dein#add('kchmck/vim-coffee-script')           "coffee-script用シンタックスハイライト
+  call dein#add('posva/vim-vue')                      "vue用シンタックスハイライト
 
   call dein#end()
   call dein#save_state()
