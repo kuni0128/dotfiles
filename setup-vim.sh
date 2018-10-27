@@ -1,11 +1,11 @@
 #!/bin/bash
 
-package_path="~/.vim/pack/mypackage"
+package_path="${HOME}/.vim/pack/mypackage"
 package_start_path="${package_path}/start"
 package_opt_path="${package_path}/opt"
-dot_path="~/dotfiles"
+dot_path="${HOME}/dotfiles"
 dot_vim_config_path="${dot_path}/.vim/config"
-vim_config_path="~/.vim/config"
+vim_config_path="${HOME}/.vim/config"
 
 mkdir -p $package_start_path
 mkdir -p $package_opt_path
@@ -20,11 +20,11 @@ git clone https://github.com/Shougo/neosnippet-snippets.git         #スニペ�
 git clone https://github.com/chriskempson/vim-tomorrow-theme.git    #カラースキーマ
 
 ## create symbolic link for vim plugins
-ln -sf ~/dotfiles/.vim/config/plugins/nerdtree.vim ~/.vim/config/plugins/nerdtree.vim
-ln -sf ~/dotfiles/.vim/config/plugins/neocomplete.vim ~/.vim/config/plugins/neocomplete.vim
+ln -sf ${dot_vim_config_path}/plugins/nerdtree.vim ${vim_config_path}/plugins/nerdtree.vim
+ln -sf ${dot_vim_config_path}/plugins/neocomplete.vim ${vim_config_path}/plugins/neocomplete.vim
 
 ## create symbolic link for vim configuration
-ln -sf ~/dotfiles/.vimrc ~/.vimrc
-ln -sf ~/dotfiles/.vim/config/basic.vim ~/.vim/config/basic.vim
-ln -sf ~/dotfiles/.vim/config/display.vim ~/.vim/config/display.vim
-ln -sf ~/dotfiles/.vim/config/search.vim ~/.vim/config/search.vim
+ln -sf ${dot_path}/.vimrc ~/.vimrc
+ln -sf ${dot_vim_config_path}/basic.vim ${vim_config_path}/basic.vim
+ln -sf ${dot_vim_config_path}/display.vim ${vim_config_path}/display.vim
+ln -sf ${dot_vim_config_path}/search.vim ${vim_config_path}/search.vim
