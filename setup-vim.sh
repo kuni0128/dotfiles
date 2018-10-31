@@ -14,7 +14,9 @@ mkdir -p "${vim_config_path}/plugins"
 # git clone vim plugins with load at start
 cd $package_start_path
 git clone https://github.com/scrooloose/nerdtree.git                #ツリー表示
-git clone https://github.com/Shougo/neocomplete.vim.git             #コードの自動補完
+git clone https://github.com/Shougo/deoplete.nvim.git               #コードの自動補完
+git clone https://github.com/roxma/nvim-yarp.git                    #vim8でdeopleteを使うために必要
+git clone https://github.com/roxma/vim-hug-neovim-rpc.git           #vim8でdeopleteを使うために必要
 git clone https://github.com/Shougo/neosnippet.vim.git              #スニペットの自動補完
 git clone https://github.com/Shougo/neosnippet-snippets.git         #スニペット集
 git clone https://github.com/chriskempson/vim-tomorrow-theme.git    #カラースキーマ
