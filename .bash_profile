@@ -7,6 +7,9 @@ alias ga='git add .'
 alias gd='git diff'
 alias p='peco'
 
+# import environment configuration
+source ~/dotfiles/.bash/env.sh
+
 # git
 #source ~/.bash/git-completion.bash
 export PATH=$PATH:/usr/local/share/git-core/contrib/diff-highlight
