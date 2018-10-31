@@ -21,6 +21,10 @@ git clone https://github.com/Shougo/neosnippet.vim.git              #スニペ�
 git clone https://github.com/Shougo/neosnippet-snippets.git         #スニペット集
 git clone https://github.com/chriskempson/vim-tomorrow-theme.git    #カラースキーマ
 git clone https://github.com/ctrlpvim/ctrlp.vim.git                 #多機能セレクタ
+git clone --depth 1 https://github.com/autozimu/LanguageClient-neovim.git
+cd LanguageClient-neovim
+bash install.sh
+set runtimepath+="${package_start_path}/LanguageClient-neovim"
 
 # TODO: lazy load
 git clone https://github.com/slim-template/vim-slim.git             #slim用シンタックスハイライト
@@ -29,7 +33,7 @@ git clone https://github.com/tpope/vim-endwise.git                  #閉じタ�
 
 ## create symbolic link for vim plugins
 ln -sf ${dot_vim_config_path}/plugins/nerdtree.vim ${vim_config_path}/plugins/nerdtree.vim
-ln -sf ${dot_vim_config_path}/plugins/neocomplete.vim ${vim_config_path}/plugins/neocomplete.vim
+ln -sf ${dot_vim_config_path}/plugins/deoplete.vim ${vim_config_path}/plugins/deoplete.vim
 
 ## create symbolic link for vim configuration
 ln -sf ${dot_path}/.vimrc ~/.vimrc
