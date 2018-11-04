@@ -14,18 +14,25 @@ mkdir -p "${vim_config_path}/plugins"
 # git clone vim plugins with load at start
 cd $package_start_path
 git clone https://github.com/scrooloose/nerdtree.git                #ツリー表示
-git clone https://github.com/Shougo/neocomplete.vim.git             #コードの自動補完
+git clone https://github.com/Shougo/deoplete.nvim.git               #コードの自動補完
+git clone https://github.com/roxma/nvim-yarp.git                    #vim8でdeopleteを使うために必要
+git clone https://github.com/roxma/vim-hug-neovim-rpc.git           #vim8でdeopleteを使うために必要
+git clone https://github.com/Shougo/deoplete-rct.git                #ruby補完
+git clone https://github.com/fishbullet/deoplete-ruby.git           #ruby補完
+git clone https://github.com/osyo-manga/vim-monster.git             #ruby補完
 git clone https://github.com/Shougo/neosnippet.vim.git              #スニペットの自動補完
 git clone https://github.com/Shougo/neosnippet-snippets.git         #スニペット集
 git clone https://github.com/chriskempson/vim-tomorrow-theme.git    #カラースキーマ
 git clone https://github.com/ctrlpvim/ctrlp.vim.git                 #多機能セレクタ
+
+# TODO: lazy load
 git clone https://github.com/slim-template/vim-slim.git             #slim用シンタックスハイライト
 git clone https://github.com/posva/vim-vue.git                      #vue用シンタックスハイライト
 git clone https://github.com/tpope/vim-endwise.git                  #閉じタグの自動補完
 
 ## create symbolic link for vim plugins
 ln -sf ${dot_vim_config_path}/plugins/nerdtree.vim ${vim_config_path}/plugins/nerdtree.vim
-ln -sf ${dot_vim_config_path}/plugins/neocomplete.vim ${vim_config_path}/plugins/neocomplete.vim
+ln -sf ${dot_vim_config_path}/plugins/deoplete.vim ${vim_config_path}/plugins/deoplete.vim
 
 ## create symbolic link for vim configuration
 ln -sf ${dot_path}/.vimrc ~/.vimrc
