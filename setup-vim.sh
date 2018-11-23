@@ -23,6 +23,8 @@ git clone https://github.com/osyo-manga/vim-monster.git             #ruby補完
 git clone https://github.com/Shougo/neosnippet.vim.git              #スニペットの自動補完
 git clone https://github.com/Shougo/neosnippet-snippets.git         #スニペット集
 git clone https://github.com/chriskempson/vim-tomorrow-theme.git    #カラースキーマ
+git clone https://github.com/vim-scripts/twilight.git               #カラースキーマ
+git clone https://github.com/w0ng/vim-hybrid.git                    #カラースキーマ
 git clone https://github.com/ctrlpvim/ctrlp.vim.git                 #多機能セレクタ
 
 # TODO: lazy load

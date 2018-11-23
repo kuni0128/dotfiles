@@ -7,5 +7,7 @@ set showcmd                          "実行前入力コマンドを右下に表
 
 syntax on                            "シンタックスハイライトを有効
 "colorscheme Tomorrow-Night-Bright    "カラースキーマを指定
+"colorscheme twilight                 "カラースキーマを指定
+colorscheme hybrid                   "カラースキーマを指定
 highlight LineNr ctermfg=228         "行番号の色
 autocmd FileType vue syntax sync fromstart    "ファイルの先頭からパースしてハイライト行う
