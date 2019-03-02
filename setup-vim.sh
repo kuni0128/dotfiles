@@ -20,6 +20,7 @@ git clone https://github.com/roxma/vim-hug-neovim-rpc.git           #vim8でdeop
 git clone https://github.com/Shougo/deoplete-rct.git                #ruby補完
 git clone https://github.com/fishbullet/deoplete-ruby.git           #ruby補完
 git clone https://github.com/osyo-manga/vim-monster.git             #ruby補完
+git clone https://github.com/tpope/vim-rails.git                    #railsコードジャンプ
 git clone https://github.com/Shougo/neosnippet.vim.git              #スニペットの自動補完
 git clone https://github.com/Shougo/neosnippet-snippets.git         #スニペット集
 git clone https://github.com/chriskempson/vim-tomorrow-theme.git    #カラースキーマ
