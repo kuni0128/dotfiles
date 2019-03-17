@@ -30,5 +30,10 @@ export PATH=$PATH:/usr/local/bin
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
+# go
+if [ -e /usr/local/go/bin/go ]; then
+  export PATH=$PATH:/usr/local/go/bin
+fi
+
 # peco
 source ~/dotfiles/.bash/peco_history.sh
