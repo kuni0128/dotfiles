@@ -42,5 +42,6 @@ ln -sf ${dot_vim_config_path}/plugins/deoplete.vim ${vim_config_path}/plugins/de
 ## create symbolic link for vim configuration
 ln -sf ${dot_path}/.vimrc ~/.vimrc
 ln -sf ${dot_vim_config_path}/basic.vim ${vim_config_path}/basic.vim
+ln -sf ${dot_vim_config_path}/ctags.vim ${vim_config_path}/ctags.vim
 ln -sf ${dot_vim_config_path}/display.vim ${vim_config_path}/display.vim
 ln -sf ${dot_vim_config_path}/search.vim ${vim_config_path}/search.vim
