@@ -1,3 +1,5 @@
+set fileformats=unix,dos,mac
+set fileencodings=utf-8,sjis
 set virtualedit=block           "矩形選択時に文字がなくても右に移動可能
 set wildmode=list:full          "ファイル名補完時にリスト表示かつ、tab押下時に次候補を選択
 set backspace=indent,eol,start  "deleteキーで行頭の空白、改行、挿入モード開始位置より手前の文字を削除
