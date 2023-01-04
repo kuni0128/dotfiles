@@ -13,7 +13,7 @@ alias k='kubectl'
 alias p='peco'
 
 # bash
-#source ~/dotfiles/.bash/peco_history.sh
+source ~/dotfiles/.bash/peco_history.sh
 source ~/dotfiles/.bash/.git-prompt.sh
 #source /usr/local/etc/bash_completion.d/git-completion.bash
 #source ~/.bash/git-completion.bash

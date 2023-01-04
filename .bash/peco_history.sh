@@ -9,6 +9,7 @@ peco-history() {
         return
     fi  
 
+    export LANG=c
     local CMD=$(fc -l $FIRST | sort -k 2 -k 1nr | uniq -f 1 | sort -nr | sed -E 's/^[0-9]+[[:blank:]]+//' | peco | head -n 1)
 
     if [ -n "$CMD" ] ; then
@@ -20,5 +21,6 @@ peco-history() {
     else
         history -d $((HISTCMD-1))
     fi  
+    export LANG=ja_JP.UTF-8
 }
 bind -x '"\C-r":peco-history'
