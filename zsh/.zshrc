@@ -26,5 +26,18 @@ if type brew &>/dev/null; then
   compinit
 fi
 
-#  prompt
+# prompt
 PROMPT="%F{green}%n%f %F{cyan}($(git_super_status))%f:%F{185}%~%f"$'\n'"%# "
+
+# functions
+add_newline() {
+  if [[ -z $PS1_NEWLINE_LOGIN ]]; then
+    PS1_NEWLINE_LOGIN=true
+  else
+    printf '\n'
+  fi
+}
+
+precmd() {
+  add_newline
+}
