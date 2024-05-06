@@ -1,4 +1,10 @@
-# Set env
+# Load libraries
+autoload -Uz colors && colors
+
+# alias
+alias python="python3"
+
+# env
 typeset -U path PATH
 path=(
   /usr/local/bin
@@ -10,13 +16,6 @@ path=(
   /Library/Apple/usr/bin
 )
 
-# Setup prompt
-autoload -Uz colors && colors
-#PROMPT="%F{green}%n%f %F{cyan}($(arch))%f:%F{blue}%~%f"$'\n'"%# "
-PROMPT="%F{green}%n%f %F{cyan}($(git_super_status))%f:%F{blue}%~%f"$'\n'"%# "
-#PROMPT="%F{green}%h%f:%F{cyan}%~%f $(git_super_status)"$'\n'"%# "
-
-
 # Enable plugins
 if type brew &>/dev/null; then
   FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
@@ -27,3 +26,5 @@ if type brew &>/dev/null; then
   compinit
 fi
 
+#  prompt
+PROMPT="%F{green}%n%f %F{cyan}($(git_super_status))%f:%F{185}%~%f"$'\n'"%# "
