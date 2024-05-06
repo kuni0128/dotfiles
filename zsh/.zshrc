@@ -1,3 +1,7 @@
+#################################
+# general
+#################################
+
 # init
 zstyle ":completion:*:commands" rehash 1
 autoload -Uz colors && colors
@@ -7,20 +11,10 @@ alias python="python3"
 alias la="ls -la"
 alias g="git"
 alias gb="git branch"
+alias gd="git diff"
 alias gs="git status"
 alias gc="git checkout"
-
-# env
-typeset -U path PATH
-path=(
-  /usr/local/bin
-  /System/Cryptexes/App/usr/bin
-  /usr/bin
-  /bin
-  /usr/sbin
-  /sbin
-  /Library/Apple/usr/bin
-)
+alias distinct='awk '\''!a[$0]++'\'
 
 # plugins
 if type brew &>/dev/null; then
@@ -32,7 +26,20 @@ if type brew &>/dev/null; then
   compinit
 fi
 
-# prompt
+# env
+HISTFILE=~/.zsh_history
+HISTSIZE=100000
+SAVEHIST=100000
+typeset -U path PATH
+path=(
+  /usr/local/bin
+  /System/Cryptexes/App/usr/bin
+  /usr/bin
+  /bin
+  /usr/sbin
+  /sbin
+  /Library/Apple/usr/bin
+)
 PROMPT="%F{green}%n%f %F{cyan}($(git_super_status))%f:%F{185}%~%f"$'\n'"%# "
 
 # functions
@@ -47,3 +54,14 @@ add_newline() {
 precmd() {
   add_newline
 }
+
+#################################
+# peco
+#################################
+function peco-select-history() {
+  BUFFER=$(\history -n -r 1 | distinct | peco --query "$LBUFFER")
+  CURSOR=$#BUFFER
+  zle reset-prompt
+}
+zle -N peco-select-history
+bindkey '^r' peco-select-history
