@@ -5,6 +5,8 @@
 # init
 zstyle ":completion:*:commands" rehash 1
 autoload -Uz colors && colors
+autoload -Uz chpwd_recent_dirs cdr add-zsh-hook
+add-zsh-hook chpwd chpwd_recent_dirs
 
 # alias
 alias python="python3"
@@ -66,5 +68,14 @@ function peco-select-history() {
 zle -N peco-select-history
 bindkey '^r' peco-select-history
 
-# TODO: enable cdr with peco
+function peco-cdr() {
+  local selected_dir=$(cdr -l | awk '{ print $2 }' | peco)
+  if [ -n "$selected_dir" ]; then
+    BUFFER="cd ${selected_dir}"
+    zle accept-line
+  fi
+  zle clear-screen
+}
+zle -N peco-cdr
+bindkey '^e' peco-cdr
 
