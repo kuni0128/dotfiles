@@ -4,6 +4,11 @@ autoload -Uz colors && colors
 
 # alias
 alias python="python3"
+alias la="ls -la"
+alias g="git"
+alias gb="git branch"
+alias gs="git status"
+alias gc="git checkout"
 
 # env
 typeset -U path PATH
