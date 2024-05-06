@@ -1,4 +1,5 @@
-# Load libraries
+# init
+zstyle ":completion:*:commands" rehash 1
 autoload -Uz colors && colors
 
 # alias
@@ -16,7 +17,7 @@ path=(
   /Library/Apple/usr/bin
 )
 
-# Enable plugins
+# plugins
 if type brew &>/dev/null; then
   FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
   source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
