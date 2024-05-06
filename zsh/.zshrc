@@ -3,10 +3,14 @@
 #################################
 
 # init
+source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /usr/local/opt/zsh-git-prompt/zshrc.sh
 zstyle ":completion:*:commands" rehash 1
 autoload -Uz colors && colors
 autoload -Uz chpwd_recent_dirs cdr add-zsh-hook
 add-zsh-hook chpwd chpwd_recent_dirs
+autoload -Uz compinit
+compinit
 
 # alias
 alias python="python3"
@@ -18,17 +22,8 @@ alias gs="git status"
 alias gc="git checkout"
 alias distinct='awk '\''!a[$0]++'\'
 
-# plugins
-if type brew &>/dev/null; then
-  FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
-  source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-  source /usr/local/opt/zsh-git-prompt/zshrc.sh
-
-  autoload -Uz compinit
-  compinit
-fi
-
 # env
+FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
 HISTFILE=~/.zsh_history
 HISTSIZE=100000
 SAVEHIST=100000
