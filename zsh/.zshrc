@@ -12,7 +12,7 @@ case "$(uname -s)" in
   Linux)
     source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
     source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-    [[ -f /usr/share/zsh-git-prompt/zshrc.sh ]] && source /usr/share/zsh-git-prompt/zshrc.sh
+    [[ -f $HOME/.zsh-git-prompt/zshrc.sh ]] && source $HOME/.zsh-git-prompt/zshrc.sh
     ;;
 esac
 zstyle ":completion:*:commands" rehash 1
@@ -40,7 +40,11 @@ HISTFILE=~/.zsh_history
 HISTSIZE=100000
 SAVEHIST=100000
 typeset -U path PATH
-PROMPT="%F{green}%n%f %F{cyan}($(git_super_status))%f:%F{185}%~%f"$'\n'"%# "
+if typeset -f git_super_status > /dev/null; then
+  PROMPT="%F{green}%n%f %F{cyan}($(git_super_status))%f:%F{185}%~%f"$'\n'"%# "
+else
+  PROMPT="%F{green}%n%f:%F{185}%~%f"$'\n'"%# "
+fi
 
 # functions
 add_newline() {
