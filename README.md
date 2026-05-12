@@ -1,8 +1,8 @@
 # dotfiles
 
-Personal dotfiles for macOS and Ubuntu. Manages zsh and Neovim configuration.
+macOS と Ubuntu 向けの個人 dotfiles。zsh と Neovim の設定を管理する。
 
-## Setup
+## セットアップ
 
 ```bash
 git clone https://github.com/kuni0128/dotfiles.git ~/dotfiles
@@ -10,47 +10,47 @@ cd ~/dotfiles
 make install
 ```
 
-After install, restart your terminal (or run `exec zsh`).
+インストール後、ターミナルを再起動するか `exec zsh` を実行する。
 
-### macOS notes
+### macOS の注意点
 
-- On a fresh macOS, `git clone` triggers a prompt to install Xcode Command Line Tools — accept it.
-- Homebrew installation may ask for your password.
+- 新規 macOS では `git clone` 時に Xcode Command Line Tools のインストールを求められる — 承認する。
+- Homebrew のインストール時にパスワードが求められる場合がある。
 
-### Ubuntu notes
+### Ubuntu の注意点
 
-- Requires `software-properties-common` for `add-apt-repository` (usually pre-installed on desktop).
-- If `make` is missing, install it first: `sudo apt install -y make`.
-- The Neovim PPA can occasionally return 503. If that happens, install Neovim manually via AppImage and re-run `make install`.
+- `add-apt-repository` のために `software-properties-common` が必要 (デスクトップ版では通常プリインストール済み)。
+- `make` が無い場合は事前にインストール: `sudo apt install -y make`
+- Neovim PPA が稀に 503 を返すことがある。その場合は AppImage で Neovim を手動インストールしてから `make install` を再実行する。
 
-## What's included
+## インストールされるもの
 
-### Packages
+### パッケージ
 
-| Category | macOS (Brewfile) | Ubuntu (apt + git) |
+| カテゴリ | macOS (Brewfile) | Ubuntu (apt + git) |
 |----------|------------------|---------------------|
 | Shell | `zsh-autosuggestions`, `zsh-syntax-highlighting`, `zsh-completions`, `zsh-git-prompt` | apt: `zsh-autosuggestions`, `zsh-syntax-highlighting` / git: `zsh-git-prompt` |
-| Editor | `neovim` | `neovim` (via PPA) |
+| エディタ | `neovim` | `neovim` (PPA経由) |
 | Git | `git`, `gh` | `git`, `gh` |
-| Search | `fzf`, `ripgrep`, `peco` | `fzf`, `ripgrep`, `peco` |
-| Version manager | `anyenv` | `anyenv` (via git) |
+| 検索 | `fzf`, `ripgrep`, `peco` | `fzf`, `ripgrep`, `peco` |
+| バージョン管理 | `anyenv` | `anyenv` (git経由) |
 
-### Configs
+### 設定ファイル
 
-| Source | Target |
+| ソース | リンク先 |
 |--------|--------|
 | `zsh/.zshrc` | `~/.zshrc` |
 | `nvim/` | `~/.config/nvim/` |
 
-## Structure
+## ディレクトリ構造
 
 ```
 dotfiles/
-├── install.sh      # OS detection + install logic
+├── install.sh      # OS判定 + インストール処理
 ├── Makefile        # `make install` → bash install.sh
-├── Brewfile        # macOS packages
-├── zsh/.zshrc      # zsh configuration
-└── nvim/           # Neovim configuration (lazy.nvim)
+├── Brewfile        # macOS用パッケージ定義
+├── zsh/.zshrc      # zsh設定
+└── nvim/           # Neovim設定 (lazy.nvim)
     ├── init.lua
     ├── lua/
     │   ├── options.lua
@@ -59,6 +59,6 @@ dotfiles/
     └── CHEATSHEET.md
 ```
 
-## Neovim cheatsheet
+## Neovim チートシート
 
-See [nvim/CHEATSHEET.md](nvim/CHEATSHEET.md) for basic pane/tree operations.
+ペイン操作やファイルツリーの基本操作は [nvim/CHEATSHEET.md](nvim/CHEATSHEET.md) を参照。
