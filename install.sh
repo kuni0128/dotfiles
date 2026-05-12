@@ -40,6 +40,11 @@ install_ubuntu() {
     git clone https://github.com/anyenv/anyenv "$HOME/.anyenv"
     "$HOME/.anyenv/bin/anyenv" install --init
   fi
+
+  # zsh-git-prompt is not available via apt
+  if [ ! -d "$HOME/.zsh-git-prompt" ]; then
+    git clone https://github.com/olivierverdier/zsh-git-prompt "$HOME/.zsh-git-prompt"
+  fi
 }
 
 setup_symlinks() {
