@@ -3,9 +3,18 @@
 #################################
 
 # init
-source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source $(brew --prefix)/opt/zsh-git-prompt/zshrc.sh
+case "$(uname -s)" in
+  Darwin)
+    source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+    source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+    source $(brew --prefix)/opt/zsh-git-prompt/zshrc.sh
+    ;;
+  Linux)
+    source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+    source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+    [[ -f /usr/share/zsh-git-prompt/zshrc.sh ]] && source /usr/share/zsh-git-prompt/zshrc.sh
+    ;;
+esac
 zstyle ":completion:*:commands" rehash 1
 autoload -Uz colors && colors
 autoload -Uz chpwd_recent_dirs cdr add-zsh-hook
@@ -24,20 +33,11 @@ alias gc="git checkout"
 alias distinct='awk '\''!a[$0]++'\'
 
 # env
-FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
+[[ "$(uname -s)" == "Darwin" ]] && FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
 HISTFILE=~/.zsh_history
 HISTSIZE=100000
 SAVEHIST=100000
 typeset -U path PATH
-path=(
-  /usr/local/bin
-  /System/Cryptexes/App/usr/bin
-  /usr/bin
-  /bin
-  /usr/sbin
-  /sbin
-  /Library/Apple/usr/bin
-)
 PROMPT="%F{green}%n%f %F{cyan}($(git_super_status))%f:%F{185}%~%f"$'\n'"%# "
 
 # functions
