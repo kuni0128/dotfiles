@@ -17,7 +17,6 @@ install_ubuntu() {
     zsh-autosuggestions \
     zsh-syntax-highlighting \
     vim \
-    tmux \
     git \
     fzf \
     ripgrep \
@@ -39,9 +38,8 @@ install_ubuntu() {
 }
 
 setup_symlinks() {
-  ln -sf "$DOTFILES_DIR/zsh/.zshrc"       "$HOME/.zshrc"
-  ln -sf "$DOTFILES_DIR/vim/.vimrc"       "$HOME/.vimrc"
-  ln -sf "$DOTFILES_DIR/tmux/.tmux.conf"  "$HOME/.tmux.conf"
+  ln -sf "$DOTFILES_DIR/zsh/.zshrc"  "$HOME/.zshrc"
+  ln -sf "$DOTFILES_DIR/vim/.vimrc"  "$HOME/.vimrc"
 }
 
 case "$OS" in

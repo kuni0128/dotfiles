@@ -5,9 +5,8 @@ brew "zsh-completions"
 brew "zsh-git-prompt"
 brew "peco"
 
-# Editor / Multiplexer
+# Editor
 brew "vim"
-brew "tmux"
 
 # Git
 brew "git"
