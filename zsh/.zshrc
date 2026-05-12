@@ -3,8 +3,9 @@
 #################################
 
 # init
-source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-source /usr/local/opt/zsh-git-prompt/zshrc.sh
+source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $(brew --prefix)/opt/zsh-git-prompt/zshrc.sh
 zstyle ":completion:*:commands" rehash 1
 autoload -Uz colors && colors
 autoload -Uz chpwd_recent_dirs cdr add-zsh-hook
