@@ -6,7 +6,7 @@ brew "zsh-git-prompt"
 brew "peco"
 
 # Editor
-brew "vim"
+brew "neovim"
 
 # Git
 brew "git"

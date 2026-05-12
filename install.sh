@@ -11,12 +11,17 @@ install_macos() {
 }
 
 install_ubuntu() {
+  # Neovim stable PPA (Ubuntu's apt version is too old for modern plugins)
+  if ! grep -rq "neovim-ppa/stable" /etc/apt/sources.list.d/ 2>/dev/null; then
+    sudo add-apt-repository -y ppa:neovim-ppa/stable
+  fi
+
   sudo apt update
   sudo apt install -y \
     zsh \
     zsh-autosuggestions \
     zsh-syntax-highlighting \
-    vim \
+    neovim \
     git \
     fzf \
     ripgrep \
@@ -39,7 +44,8 @@ install_ubuntu() {
 
 setup_symlinks() {
   ln -sf "$DOTFILES_DIR/zsh/.zshrc"  "$HOME/.zshrc"
-  ln -sf "$DOTFILES_DIR/vim/.vimrc"  "$HOME/.vimrc"
+  mkdir -p "$HOME/.config"
+  ln -sfn "$DOTFILES_DIR/nvim"       "$HOME/.config/nvim"
 }
 
 case "$OS" in
@@ -57,5 +63,5 @@ case "$OS" in
 esac
 
 setup_symlinks
-vim +PlugInstall +qall
+nvim --headless "+Lazy! sync" +qa
 echo "Done. Run: source ~/.zshrc"

@@ -24,6 +24,8 @@ compinit
 
 # alias
 alias python="python3"
+alias vim="nvim"
+alias vi="nvim"
 alias la="ls -la"
 alias g="git"
 alias gb="git branch"
