@@ -21,3 +21,6 @@ brew "anyenv"
 
 # Secrets
 brew "sops"
+
+# Google Cloud SDK
+cask "google-cloud-sdk"
