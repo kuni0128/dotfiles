@@ -25,7 +25,8 @@ install_ubuntu() {
     git \
     fzf \
     ripgrep \
-    peco
+    peco \
+    direnv
 
   if ! which gh > /dev/null 2>&1; then
     curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg \
