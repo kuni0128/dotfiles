@@ -18,3 +18,6 @@ brew "ripgrep"
 
 # Node.js version manager
 brew "anyenv"
+
+# Secrets
+brew "sops"
