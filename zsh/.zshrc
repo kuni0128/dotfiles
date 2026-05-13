@@ -40,6 +40,7 @@ HISTFILE=~/.zsh_history
 HISTSIZE=100000
 SAVEHIST=100000
 typeset -U path PATH
+command -v direnv > /dev/null && eval "$(direnv hook zsh)"
 if typeset -f git_super_status > /dev/null; then
   PROMPT="%F{green}%n%f %F{cyan}($(git_super_status))%f:%F{185}%~%f"$'\n'"%# "
 else
